@@ -29,7 +29,7 @@ const start = async () => {
       const init = qtd * index
       const end = qtd * idx
       results = [...results, files.slice(init, end)]
-      const outputName = Math.round(new Date().getTime() * Math.random()).toString()
+      const outputName = `${idx}-${Math.round(new Date().getTime() * Math.random())}`
       fs.mkdirSync(path.join(folderPath, 'output', outputName))
       const sliced = files.slice(init, end)
       for (let file of sliced) {
